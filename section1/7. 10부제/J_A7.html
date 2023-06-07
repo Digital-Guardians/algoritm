@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(date, carNumArr) {
+        let carNum = 0;
+        for (let i = 0; i < carNumArr.length; i++) {
+          if (carNumArr[i] % 10 === date) {
+            carNum++;
+          }
+        }
+        return carNum;
+      }
+      let carArr = [12, 20, 54, 30, 87, 91, 30];
+      console.log(solution(0, carArr));
+    </script>
+  </body>
+</html>
