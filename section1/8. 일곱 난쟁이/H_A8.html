@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A8 출력</title>
+  </head>
+  <body>
+    <script>
+      // ⭐⭐⭐
+      function solution(arr) {
+        let result = arr;
+        // 9명 전체 합
+        let sum = result.reduce((a, b) => a + b, 0);
+
+        for (let i = 0; i < result.length - 1; i++) {
+          for (let j = i + 1; j < result.length; j++) {
+            // 전체값에서 i번째, j번째 요소의 합을 뺐을때, 100이 되면!
+            if (sum - (result[i] + result[j]) == 100) {
+              // arr에서 해당값 제거
+              result.splice(j, 1);
+              result.splice(i, 1);
+            }
+          }
+        }
+        return result;
+      }
+      let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+      let arr1 = [13, 7, 17, 3, 8, 22, 25, 5, 13];
+      console.log(solution(arr));
+      console.log(solution(arr1));
+    </script>
+  </body>
+</html>
