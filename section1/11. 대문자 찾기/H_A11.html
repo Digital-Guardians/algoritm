@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A11 출력</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        const arr = str.split("");
+        let count = 0;
+        arr.forEach((el) => {
+          if (el !== el.toLowerCase()) {
+            count++;
+          }
+        });
+        return count;
+      }
+      console.log(solution("KoreaTimeGood"));
+      console.log(solution("ABCDEFghi"));
+      console.log(solution("AbCdEfGhI"));
+    </script>
+  </body>
+</html>
