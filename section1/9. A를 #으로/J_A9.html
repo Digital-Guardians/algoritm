@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(word) {
+        return word.replaceAll("A", "#");
+      }
+
+      function solution2(word) {
+        let answer = "";
+        for (let x of word) {
+          if (x === "A") answer += "#";
+          else answer += x;
+        }
+        return answer;
+      }
+
+      console.log(solution("BANANA"));
+    </script>
+  </body>
+</html>

@@ -7,9 +7,10 @@
     <script>
       function solution(short) {
         let sum = 0;
-        for (let i = 0; i < short.length; i++) {
-          sum += short[i];
-        }
+        // for (let i = 0; i < short.length; i++) {
+        //   sum += short[i];
+        // }
+        sum = short.reduce((a, b) => a + b, 0);
 
         for (let i = 0; i < 7; i++) {
           for (let j = i + 1; j < 9; j++) {
