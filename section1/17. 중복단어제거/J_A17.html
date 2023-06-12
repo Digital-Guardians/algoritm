@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution1(words) {
+        return [...new Set(words)];
+      }
+      function solution2(words) {
+        return words.filter((word, index) => words.indexOf(word) === index);
+      }
+
+      console.log(solution1(["good", "time", "good", "time", "student"]));
+      console.log(solution2(["good", "time", "good", "time", "student"]));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution1(words) {
+        let set;
+        let answer = "";
+        set = new Set(words);
+        // answer = [...set].join("");
+        answer = Array.from(set).join("");
+        return answer;
+      }
+
+      function solution2(words) {
+        return words
+          .split("")
+          .filter((word, index) => words.indexOf(word) === index)
+          .join("");
+      }
+
+      console.log(solution1("ksekkset"));
+      console.log(solution2("ksekkset"));
+    </script>
+  </body>
+</html>
