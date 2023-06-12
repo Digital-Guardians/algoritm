@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    let str = "KoreaTimeGood";
+
+    function solution(s) {
+      let answer = '';
+      for (let e of s) {
+        if (e === e.toUpperCase()) answer++;
+      }
+      return answer;
+    }
+    function solution2(s) {
+      // console.log(s.match(/[A-Z]/g));
+      return s.match(/[A-Z]/g).length;
+    }
+
+    console.log(solution2(str));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    let str = "ItisTimeToStudy";
+
+    function solution(str) {
+      let answer = "";
+      for (let e of str) {
+        if (e.charCodeAt() >= 97 && e.charCodeAt() <= 125) answer += e.toUpperCase();
+        else answer += e
+      }
+      return answer;
+    }
+
+    function solution2(str) {
+      return str.toUpperCase();
+    }
+
+    console.log(solution(str));
+    console.log(solution2(str));
+  </script>
+</body>
+
+</html>

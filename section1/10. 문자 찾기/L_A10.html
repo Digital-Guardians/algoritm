@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    let str = "COMPUTERPROGRAMMING";
+
+    function solution(s, t) {
+      let answer = 0;
+      for (let e of s) {
+        if (e === t) answer++;
+      }
+      return answer;
+    }
+
+    function solution2(s, t) {
+      let answer = s.split(t).length - 1;
+      return answer;
+    }
+
+    console.log(solution(str, 'R'));
+    console.log(solution2(str, 'R'));
+  </script>
+</body>
+
+</html>

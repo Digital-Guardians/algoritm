@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(str) {
+      let answer = '';
+      for (let e of str) {
+        if (e === e.toUpperCase()) answer += e.toLowerCase();
+        else answer += e.toUpperCase();
+      }
+      return answer;
+    }
+
+    function solution2(str) {
+      const arr = str.split('');
+      let answer = arr.map(e => {
+        if (e === e.toUpperCase()) e.toLowerCase();
+        else e.toUpperCase();
+      })
+      
+      return answer;
+    }
+
+
+
+    console.log(solution("StuDY"));
+    console.log(solution2("StuDY"));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    let arr = [12, 77, 38, 41, 53, 92, 85];
+
+    function solution(arr) {
+      let odd = 0;
+      let min = Number.MAX_SAFE_INTEGER;
+
+      for (const e of arr) {
+        if (e % 2 === 1) {
+          odd += e;
+          if (min > e) min = e;
+        }
+      }
+
+      return [odd, min];
+    }
+
+    console.log(solution(arr));
+  </script>
+</body>
+
+</html>

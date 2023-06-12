@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    let str = ["good", "time", "good", "time", "student"];
+
+    function solution(s) {
+      let set = new Set(s)
+      return [...set];
+    }
+
+    function solution2(s) {
+      let answer = s.filter((e,i) => s.indexOf(e) === i)
+      return answer
+    }
+    console.log(solution(str));
+    console.log(solution2(str));
+  </script>
+</body>
+
+</html>
