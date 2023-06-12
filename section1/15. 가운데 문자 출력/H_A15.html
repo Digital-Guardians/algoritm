@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A15 출력</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        if (str.length % 2 === 0) {
+          return str.substr(str.length / 2 - 1, 2);
+        } else {
+          return str.substr(Math.floor(str.length / 2), 1);
+        }
+      }
+      console.log(solution("study"));
+      console.log(solution("good"));
+    </script>
+  </body>
+</html>

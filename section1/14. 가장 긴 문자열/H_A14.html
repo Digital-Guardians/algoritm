@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A14 출력</title>
+  </head>
+  <body>
+    <script>
+      function solution(num, arr) {
+        let long = "";
+        let max = Number.MIN_SAFE_INTEGER;
+
+        for (let el of arr) {
+          if (el.length > max) {
+            max = el.length;
+            long = el;
+          }
+        }
+
+        return long;
+      }
+      const strArr = ["teacher", "time", "student", "beautiful", "good"];
+      const strArr2 = ["teacheraaaaaaaa", "beautiful", "good"];
+      const strArr3 = [
+        "teaaaaccccheeeeeeer",
+        "tddddddddddddddime",
+        "student",
+        "beautiful",
+        "good",
+      ];
+      console.log(solution(5, strArr));
+      console.log(solution(3, strArr2));
+      console.log(solution(5, strArr3));
+    </script>
+  </body>
+</html>
