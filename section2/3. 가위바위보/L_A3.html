@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+
+    const Type = {
+      SCISSORS: 1,
+      ROCK: 2,
+      PAPER: 3
+    }
+
+    const result = {
+      DRAW: 'D ',
+      A_WIN: 'A ',
+      B_WIN: 'B '
+    }
+
+    const { ROCK, SCISSORS, PAPER } = Type;
+    const { DRAW, A_WIN, B_WIN } = result;
+
+    let a = [2, 3, 3, 1, 3];
+    let b = [1, 1, 2, 2, 3];
+
+    function solution(a, b) {
+      let answer = "";
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] === b[i]) return answer += DRAW
+        else if (a[i] === SCISSORS && b[i] === PAPER) answer += A_WIN;
+        else if (a[i] === PAPER && b[i] === SCISSORS) answer += B_WIN;
+        else if (a[i] > b[i]) answer += A_WIN;
+        else answer += B_WIN;
+      }
+      return answer;
+    }
+
+    console.log(solution(a, b));
+  </script>
+</body>
+
+</html>
