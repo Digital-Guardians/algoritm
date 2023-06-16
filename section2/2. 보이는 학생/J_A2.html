@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution1(nums) {
+        let count = 1;
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] > nums[i - 1]) {
+            count++;
+          }
+        }
+        return count;
+      }
+      const nums = [130, 135, 148, 149, 145, 159, 159, 153];
+      console.log(solution1(nums));
+    </script>
+  </body>
+</html>

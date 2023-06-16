@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution1(aResult, bReuslt) {
+        let answer = [];
+        for (let i = 0; i < aResult.length; i++) {
+          if (
+            (aResult[i] === 1 && bReuslt[i] === 1) ||
+            (aResult[i] === 2 && bReuslt[i] === 2) ||
+            (aResult[i] === 3 && bReuslt[i] === 3)
+          ) {
+            answer.push("D");
+          } else if (
+            (aResult[i] === 1 && bReuslt[i] === 3) ||
+            (aResult[i] === 2 && bReuslt[i] === 1) ||
+            (aResult[i] === 3 && bReuslt[i] === 2)
+          ) {
+            answer.push("A");
+          } else if (
+            (aResult[i] === 3 && bReuslt[i] === 1) ||
+            (aResult[i] === 1 && bReuslt[i] === 2) ||
+            (aResult[i] === 1 && bReuslt[i] === 3)
+          ) {
+            answer.push("B");
+          }
+        }
+        return answer.join(" ");
+      }
+
+      const aResult = [2, 3, 3, 1, 3];
+      const bReuslt = [1, 1, 2, 2, 3];
+      console.log(solution1(aResult, bReuslt));
+    </script>
+  </body>
+</html>
