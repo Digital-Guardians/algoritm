@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A2 출력</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        // 첫번째 친구는 무조건 보이므로 => 초기 : 1
+        let count = 1;
+        let max = arr[0];
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > max) {
+            count += 1;
+            max = arr[i];
+          }
+        }
+        return count;
+      }
+      const arr = [130, 135, 148, 140, 145, 150, 150, 153];
+      console.log(solution(8, arr));
+    </script>
+  </body>
+</html>
