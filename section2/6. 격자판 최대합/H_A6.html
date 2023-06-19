@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A6 출력</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        let sumArr = [];
+
+        // 대각선의 합
+        let diagonal1 = 0;
+        let diagonal2 = 0;
+
+        // 각 행 & 열의 합
+        for (let i = 0; i < n; i++) {
+          let sum1 = 0;
+          let sum2 = 0;
+
+          diagonal1 += arr[i][i];
+          diagonal2 += arr[i][n - 1 - i];
+
+          for (let j = 0; j < n; j++) {
+            sum1 += arr[i][j];
+            sum2 += arr[j][i];
+          }
+
+          sumArr.push(sum1);
+          sumArr.push(sum2);
+        }
+
+        sumArr.push(diagonal1);
+        sumArr.push(diagonal2);
+
+        // 최대값 찾기
+        let max = sumArr[0];
+
+        sumArr.forEach((el) => {
+          if (el > max) {
+            max = el;
+          }
+        });
+
+        return max;
+      }
+      const arr = [
+        [10, 12, 11, 19, 19],
+        [13, 39, 25, 27, 13],
+        [10, 30, 50, 29, 30],
+        [12, 23, 53, 37, 13],
+        [15, 11, 15, 27, 19],
+      ];
+      console.log(solution(5, arr));
+    </script>
+  </body>
+</html>

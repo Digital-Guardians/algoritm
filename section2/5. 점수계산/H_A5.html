@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A5 출력</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        let score = 0;
+        for (let i = 0; i < n; i++) {
+          let combo = 0;
+          if (arr[i] === 1) {
+            combo++;
+            for (let j = 0; j < i; j++) {
+              if (arr[j] === 1) combo++;
+              else combo = 1;
+            }
+            score += combo;
+          }
+        }
+
+        return score;
+      }
+
+      const arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+      const arr2 = [1, 1, 1, 1, 1, 0, 0, 1, 1, 0];
+      console.log(solution(10, arr));
+      console.log(solution(10, arr2));
+    </script>
+  </body>
+</html>

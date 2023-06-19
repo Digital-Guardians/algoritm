@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A4 출력</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        let answer = Array(n).fill(1);
+        for (let i = 0; i < n; i++) {
+          let rank = 1;
+          for (let j = 0; j < n; j++) {
+            if (arr[j] > arr[i]) {
+              rank++;
+            }
+          }
+          answer[i] = rank;
+        }
+        return answer;
+      }
+      const arr = [87, 89, 92, 100, 76];
+      const arr1 = [87, 87, 92, 100, 100];
+      console.log(solution(5, arr));
+      console.log(solution(5, arr1));
+    </script>
+  </body>
+</html>
