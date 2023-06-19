@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution1(arr) {
+        let result = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          let count = 1;
+          for (let j = 0; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+              count++;
+            }
+          }
+          result[i] = count;
+        }
+        return result;
+      }
+
+      function solution2(arr) {
+        let result = Array(arr.length).fill(1);
+
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+              result[i]++;
+            }
+          }
+        }
+        return result;
+      }
+      const arr1 = [87, 89, 92, 100, 76];
+      const arr2 = [87, 88, 88, 88, 76];
+      console.log(solution(arr1));
+      console.log(solution(arr2));
+    </script>
+  </body>
+</html>
